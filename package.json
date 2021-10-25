@@ -1,0 +1,22 @@
+{
+  "name": "pwa_veille_technologique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "jsonserver": "json-server -p 3001 --watch db.json",
+    "start": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastien1998/PWA_veille_technologique.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastien1998/PWA_veille_technologique/issues"
+  },
+  "homepage": "https://github.com/Sebastien1998/PWA_veille_technologique#readme"
+}

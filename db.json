@@ -1,0 +1,8 @@
+{
+    "technos": [
+        {"id": 1, "name": "Siècle digital", "description": "N/A", "url": "https://siecledigital.fr/"},
+        {"id": 2, "name": "Journal du Net", "description": "N/A", "url": "http://www.journaldunet.com/"},
+        {"id": 3, "name": "Numerama", "description": "N/A", "url": "http://www.numerama.com/"},
+        {"id": 4, "name": "Korben", "description": "N/A", "url": "https://korben.info/"}
+    ]
+}
