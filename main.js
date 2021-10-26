@@ -1,5 +1,56 @@
 const technosDiv = document.querySelector('#technos');
 
+function rss(RSS_URL){
+    fetch(RSS_URL)
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        let html = ``;
+        var json = JSON.parse(data)
+        element = json.items[0];
+        console.log(element);
+        html += `
+            <article>
+            <h2>
+            <br> 
+                <p style="text-decoration: none; color: black">
+                ${element['description'].replace("]]>", "").replace}
+                </p>
+            </h2>
+            </article>
+        `;
+        document.body.insertAdjacentHTML("beforeend", html);
+    });
+}
+
+function rss_developpez(RSS_URL){
+    fetch(RSS_URL)
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/html"))
+    .then(data => {
+ 
+        console.log(data);
+        const items = data.querySelectorAll("item");
+        let html = ``;
+        element = items[0]
+        html += `
+            <article>
+            <h2>
+            <a href="${element.querySelector("guid").innerHTML}" target="_blank">
+            <img src="${element.querySelector("enclosure").getAttribute("url")}">
+            <a/>
+            <br>
+                <a href="${element.querySelector("guid").innerHTML}" target="_blank" style="text-decoration: none; color: black">
+                ${element.querySelector("description").innerHTML.replace("]]", "")}
+                </a>
+            </h2>
+            </article>
+        `;
+        document.body.insertAdjacentHTML("beforeend", html);
+    });
+
+}
+
 function loadTechnologies(technos) {
     fetch('http://localhost:3001/technos')
         .then(response => {
@@ -22,6 +73,10 @@ function loadTechnologies(technos) {
 }
 
 loadTechnologies(technos);
+rss_developpez("https://www.developpez.com/index/rss");
+rss("https://api.rss2json.com/v1/api.json?rss_url=" +"https://www.tech2tech.fr/feed/");
+rss("https://api.rss2json.com/v1/api.json?rss_url=" + "https://feed.infoq.com/Programming-Languages/news/")
+
 
 if(navigator.serviceWorker) {
     navigator.serviceWorker
