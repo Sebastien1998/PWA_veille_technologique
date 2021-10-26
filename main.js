@@ -14,6 +14,7 @@ function rss(RSS_URL){
             <h2>
             <br> 
                 <p style="text-decoration: none; color: black">
+                <a href="${element["link"].innerHTML}" target="_blank" style="text-decoration: none; color: black">
                 ${element['description'].replace("]]>", "")}
                 </p>
             </h2>
