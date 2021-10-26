@@ -9,7 +9,6 @@ self.addEventListener('install', (evt) => {
             'index.html',
             'main.js',
             'style.css',
-            'vendors/bootstrap4.min.css',
         ])
         .then(console.log('cache initialisé'))
         .catch(console.err);
