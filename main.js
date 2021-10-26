@@ -10,15 +10,20 @@ function rss(RSS_URL){
         element = json.items[0];
         console.log(element);
         html += `
+            <div class="card">
+            <div class="card-body">
             <article>
             <h2>
             <br> 
                 <p style="text-decoration: none; color: black">
-                <a href="${element["link"].innerHTML}" target="_blank" style="text-decoration: none; color: black">
+                <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
                 ${element['description'].replace("]]>", "")}
                 </p>
+                </a>
             </h2>
             </article>
+            <div class="card">
+            <div class="card-body">
         `;
         document.body.insertAdjacentHTML("beforeend", html);
     });
@@ -35,6 +40,8 @@ function rss_developpez(RSS_URL){
         let html = ``;
         element = items[0]
         html += `
+            <div class="card">
+            <div class="card-body">
             <article>
             <h2>
             <a href="${element.querySelector("guid").innerHTML}" target="_blank">
@@ -42,10 +49,14 @@ function rss_developpez(RSS_URL){
             <a/>
             <br>
                 <a href="${element.querySelector("guid").innerHTML}" target="_blank" style="text-decoration: none; color: black">
+                <p style="text-decoration: none; color: black">
                 ${element.querySelector("description").innerHTML.replace("]]", "")}
+                </p>
                 </a>
             </h2>
             </article>
+            </div>
+            </div>
         `;
         document.body.insertAdjacentHTML("beforeend", html);
     });

@@ -46,3 +46,10 @@ button {
     margin-top: 10px;
     border: Opx;
 }
+
+
+img {
+    display: block;
+    width: 180px;
+    height: auto;
+  }
