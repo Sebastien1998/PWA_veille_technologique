@@ -26,7 +26,7 @@ function rss(RSS_URL){
             <div class="card-body">
         `;
         document.body.insertAdjacentHTML("beforeend", html);
-    });
+    }).catch(console.error);
 }
 
 function rss_developpez(RSS_URL){
@@ -59,32 +59,11 @@ function rss_developpez(RSS_URL){
             </div>
         `;
         document.body.insertAdjacentHTML("beforeend", html);
-    });
+    }).catch(console.error);
+
 
 }
 
-function loadTechnologies(technos) {
-    fetch('http://localhost:3001/technos')
-        .then(response => {
-            response.json()
-                .then(technos => {
-                    const allTechnos = technos.map(t => `
-                    <div class="card">
-                        <div class="card-body">
-                        <h5 class="card-title">${t.name}</h5>
-                        <p class="card-text">${t.description}</p>
-                        <a href="${t.url}" class="card-link">site de ${t.name}</a>
-                        </div>
-                    </div>`)
-                            .join('');
-            
-                    technosDiv.innerHTML = allTechnos; 
-                });
-        })
-        .catch(console.error);
-}
-
-loadTechnologies(technos);
 rss_developpez("https://www.developpez.com/index/rss");
 rss("https://api.rss2json.com/v1/api.json?rss_url=" +"https://www.tech2tech.fr/feed/");
 rss("https://api.rss2json.com/v1/api.json?rss_url=" + "https://feed.infoq.com/Programming-Languages/news/")
