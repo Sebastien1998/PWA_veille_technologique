@@ -108,6 +108,7 @@ self.addEventListener('fetch', (evt) => {
 // 7.3 Notifications persistantes (envoyées depuis le service worker)
 self.registration.showNotification("Notification du SW", {
     body:"je suis une notification dite persistante",
+    icon : "icons/favicon-32x32.png",
   
     // 7.4 Options de notifications grâce aux actions
     actions:[
