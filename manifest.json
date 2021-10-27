@@ -1,6 +1,6 @@
 {
-    "name": "ma pwa",
-    "short_name": "Pwa",
+    "name": "Veille Techno M2DFs",
+    "short_name": "Veille",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "standalone",
@@ -25,6 +25,11 @@
       {
         "src": "icons/bed.png",
         "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/favicon-310x310.png",
+        "sizes": "310x310",
         "type": "image/png"
       }
     ],
