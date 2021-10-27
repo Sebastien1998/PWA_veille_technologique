@@ -3,53 +3,95 @@ body {
     margin: 30px;
 }
 
-.row:first-child{
-    border-bottom: 1px solid #ced4da;
-    margin-bottom: 30px;;
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(icons/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-.row:first-child > .col {
-    padding: 10px;
+.header img {
+    width: 150px;
+}
+
+img {
+    width: 100px;
+    height: 70px;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
+.text-box h1 {
+    font-size: 62px;
+    color: #fff;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.articles {
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
 h1 {
-    color: #464a4e;
-    font-size: xx-large;
+    font-size: 36px;
+    font-weight: 600;
 }
 
-h2 {
-    color: #868e96;
-    font-size: x-large;
-    margin-bottom: 30px;
+p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
 }
 
-/* Home */
-.card {
-    width: 400px;
-    margin-bottom: 10px;
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-/* Technos */
-input {
-    width: 400px;
-    margin-bottom: 10px;
-    padding: 5px;
+.article {
+    flex-basis: 31%;
+    width: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
 }
 
-button {
-    padding: 5px 10px;
-    border-radius: 20px;
-    background-color: black;
-    color: #e9ecef;
-    margin-top: 10px;
-    border: Opx;
+.article:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
 
-img {
-    display: block;
-    width: 180px;
-    height: auto;
-  }
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .row {
+        flex-direction: column;
+    }
+}

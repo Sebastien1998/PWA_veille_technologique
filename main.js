@@ -1,4 +1,4 @@
-const technosDiv = document.querySelector('#technos');
+const technosDiv = document.querySelector('#row');
 
 function rss(RSS_URL){
     fetch(RSS_URL)
@@ -10,20 +10,13 @@ function rss(RSS_URL){
         element = json.items[0];
         console.log(element);
         html += `
-            <div class="card">
-            <div class="card-body">
-            <article>
-            <h2>
-            <br> 
-                <p style="text-decoration: none; color: black">
-                <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
-                ${element['description'].replace("]]>", "")}
-                </p>
-                </a>
-            </h2>
-            </article>
-            <div class="card">
-            <div class="card-body">
+            <div class="article">
+                    <p>
+                        <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
+                        ${element['description'].replace("]]>", "")}
+                        </a>
+                    </p>
+            </div>
         `;
         document.body.insertAdjacentHTML("beforeend", html);
     }).catch(console.error);
@@ -34,29 +27,22 @@ function rss_developpez(RSS_URL){
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/html"))
     .then(data => {
- 
+
         console.log(data);
         const items = data.querySelectorAll("item");
         let html = ``;
         element = items[0]
         html += `
-            <div class="card">
-            <div class="card-body">
-            <article>
-            <h2>
-            <a href="${element.querySelector("guid").innerHTML}" target="_blank">
-            <img src="${element.querySelector("enclosure").getAttribute("url")}">
-            <a/>
-            <br>
+        <div class="article">
+                <a href="${element.querySelector("guid").innerHTML}" target="_blank">
+                    <img src="${element.querySelector("enclosure").getAttribute("url")}"/>
+                <a/>
                 <a href="${element.querySelector("guid").innerHTML}" target="_blank" style="text-decoration: none; color: black">
-                <p style="text-decoration: none; color: black">
-                ${element.querySelector("description").innerHTML.replace("]]", "")}
-                </p>
+                    <p style="text-decoration: none;">
+                        ${element.querySelector("description").innerHTML.replace("]]", "")}
+                    </p>
                 </a>
-            </h2>
-            </article>
-            </div>
-            </div>
+        </div>
         `;
         document.body.insertAdjacentHTML("beforeend", html);
     }).catch(console.error);
