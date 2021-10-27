@@ -26,6 +26,11 @@
         "src": "icons/bed.png",
         "sizes": "512x512",
         "type": "image/png"
+      },
+      {
+        "src": "icons/favicon-310x310.png",
+        "sizes": "310x310",
+        "type": "image/png"
       }
     ],
     "splash_pages": null
