@@ -1,4 +1,4 @@
-const technosDiv = document.querySelector('#technos');
+const cacheName = 'veille-techno' + '1.1';
 
 function rss(RSS_URL){
     fetch(RSS_URL)
@@ -8,7 +8,7 @@ function rss(RSS_URL){
         let html = ``;
         var json = JSON.parse(data)
         element = json.items[0];
-        console.log(element);
+
         html += `
             <div class="card">
             <div class="card-body">
@@ -39,6 +39,7 @@ function rss_developpez(RSS_URL){
         const items = data.querySelectorAll("item");
         let html = ``;
         element = items[0]
+
         html += `
             <div class="card">
             <div class="card-body">
@@ -75,34 +76,4 @@ if(navigator.serviceWorker) {
         .catch(err => console.error('service worker NON enregistré', err));
 }
 
-//..
-//7.1 Notifications non persistantes
-// // Vérifie si la fonctionalité est disponible et si 
-// l'utilisateur n'a pas refusé les notifications
-// 7.3 Notifications persistantes (envoyées depuis le service worker)
-// Mettre en commentaire cette partie
-/* 
-if(window.Notification && window.Notification !== "denied"){
-    // demande une permission
-    Notification.requestPermission(perm => {
-        // vérifie si la permission est acceptée par l'utilisateur
-        if(perm === "granted"){
-            
-            // 7.2 Option de la notification
-            const options = {
-                body : "Body de la notification",
-                icon : "images/icons/icon-72x72.png"
-            }
 
-            // On crée une nouvelle notification
-            // 7.2 On passe les options en deuxième argument
-            const notif = new Notification("Hello notification", options);
-          
-        }
-        else{
-            // Notification refusée
-            console.log("Notification refusée");
-        }
-    })
-}
-*/
