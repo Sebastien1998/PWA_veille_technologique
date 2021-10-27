@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+
+  
   "scripts": {
     "jsonserver": "json-server -p 3001 --watch db.json",
     "start": "live-server --port=3000",
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Sebastien1998/PWA_veille_technologique/issues"
   },
-  "homepage": "https://github.com/Sebastien1998/PWA_veille_technologique#readme"
+  "homepage": "https://github.com/Sebastien1998/PWA_veille_technologique#readme",
+  "dependencies": {
+    "web-push": "^3.4.5"
+  }
 }

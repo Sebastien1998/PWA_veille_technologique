@@ -13,7 +13,7 @@ body {
 }
 
 .header img {
-    width: 150px;
+    width: 100px;
 }
 
 img {
@@ -69,12 +69,12 @@ p {
 
 .article {
     flex-basis: 31%;
-    width: 30%;
     background: #fff3f3;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
+    display: block;
 }
 
 .article:hover {
