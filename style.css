@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@1,700&family=Bebas+Neue&display=swap');
+
 body {
     background-color: #e9ecef;
     margin: 0px;
+    font-family: 'Archivo Narrow';
 }       
 
 .header {
@@ -63,6 +66,7 @@ h1 {
 }
 
 p {
+    font-family: 'Bebas Neue', sans-serif;
     color: #000;
     font-size: 14px;
     font-weight: 300;
