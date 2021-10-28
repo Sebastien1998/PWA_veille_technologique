@@ -1,8 +1,8 @@
 {
     "name": "Veille Techno M2DFs",
     "short_name": "Veille",
-    "theme_color": "#2196f3",
-    "background_color": "#2196f3",
+    "theme_color": "#04091e",
+    "background_color": "#04091e",
     "display": "standalone",
     "Scope": "https://sebastien1998.github.io/PWA_veille_technologique/",
     "start_url": "https://sebastien1998.github.io/PWA_veille_technologique/",
