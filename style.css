@@ -2,9 +2,6 @@ body {
     background-color: #e9ecef;
     margin: 30px;
 }
-
-img { display:block; }
-
 .header {
     min-height: 100vh;
     width: 100%;
@@ -21,6 +18,9 @@ img { display:block; }
 img {
     width: 100px;
     height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-box {
