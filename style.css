@@ -112,3 +112,18 @@ h3 {
         flex-direction: column;
     }
 }
+input{
+    border: none;
+    color: blue;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    cursor:pointer;
+    font-family: 'Archivo Narrow';
+  }

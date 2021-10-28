@@ -56,10 +56,11 @@ function rss_tech2tech(RSS_URL){
             html += `
                     <div class="article" target="_blank">
                         <p style="text-decoration: none; color: black">
-                        <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
                         ${element['description'].replace("]]>", "")}
-                        </a>
                         </p>
+                        <form action="${element["link"]}">
+                            <input type="submit" value="Go to Article" />
+                        </form>
                     </div>
                 `;
                 document.body.insertAdjacentHTML("beforeend", html);
@@ -120,10 +121,11 @@ function rss_infoq(RSS_URL){
             html += `
                     <div class="article">
                         <p style="text-decoration: none; color: black">
-                        <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
                         ${element['description'].replace("]]>", "")}
-                        </a>
                         </p>
+                        <form action="${element["link"]}">
+                            <input type="submit" value="Go to Article" />
+                        </form>
                     </div>
                 `;
                 document.body.insertAdjacentHTML("beforeend", html);
@@ -183,15 +185,14 @@ function rss_developpez(RSS_URL){
 
         html += `
                     <div class="article">
-                    <a href="${element.querySelector("guid").innerHTML}" target="_blank">
                     <img src="${element.querySelector("enclosure").getAttribute("url")}">
-                    <a/>
                     <br>
-                        <a href="${element.querySelector("guid").innerHTML}" target="_blank" style="text-decoration: none; color: black">
                         <p style="text-decoration: none; color: black">
                         ${element.querySelector("description").innerHTML.replace("]]", "")}
-                        </a>
                         </p>
+                        <form action="${element.querySelector("guid").innerHTML}">
+                            <input type="submit" value="Go to Article" />
+                        </form>
                     </div>
                 `;
                 document.body.insertAdjacentHTML("beforeend", html);
