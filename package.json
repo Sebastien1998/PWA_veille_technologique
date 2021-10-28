@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Sebastien1998/PWA_veille_technologique/issues"
   },
-  "homepage": "https://github.com/Sebastien1998/PWA_veille_technologique#readme",
+  "homepage": "https://sebastien1998.github.io/PWA_veille_technologique/",
   "dependencies": {
     "web-push": "^3.4.5"
   }
