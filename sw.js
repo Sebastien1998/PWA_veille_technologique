@@ -73,7 +73,7 @@ self.addEventListener('fetch', (evt) => {
                 const title = "Veille M2DFS";
                 const objNotification = {
                     body: "A new article has been added", 
-                    icon : "images/icons/icon-72x72.png"
+                    icon : "images/icons/icon-192x192.png"
                 };
                 self.registration.showNotification(title, objNotification);
             })

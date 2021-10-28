@@ -4,8 +4,8 @@
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "standalone",
-    "Scope": "/",
-    "start_url": "/",
+    "Scope": "https://sebastien1998.github.io/PWA_veille_technologique/",
+    "start_url": "https://sebastien1998.github.io/PWA_veille_technologique/",
     "icons": [
       {
         "src": "icons/icon-192x192.png",
