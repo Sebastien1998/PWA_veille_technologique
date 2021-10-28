@@ -54,7 +54,7 @@ function rss_tech2tech(RSS_URL){
             });
 
             html += `
-                    <div class="article">
+                    <div class="article" target="_blank">
                         <p style="text-decoration: none; color: black">
                         <a href="${element["link"]}" target="_blank" style="text-decoration: none; color: black">
                         ${element['description'].replace("]]>", "")}
